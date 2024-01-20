@@ -11,8 +11,12 @@
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
+    private Square sky;
+    private Square sky2;
+    private Square sky3;
+    private Square grass1;
+    private Square trail;
+    private Square grass2;
     private Triangle Mount1;
     private Triangle Mount2;
     private Triangle Mount3;
@@ -27,8 +31,12 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
+        sky = new Square();
+        sky2 = new Square();
+        sky3 = new Square();
+        grass1 = new Square();
+        trail = new Square();
+        grass2 = new Square();
         Mount1 = new Triangle(); 
         Mount2 = new Triangle();
         Mount3 = new Triangle();
@@ -45,57 +53,82 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            sky.changeColor("light blue");
+            sky.moveHorizontal(-310);
+            sky.moveVertical(-300);
+            sky.changeSize(500);
+            sky.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
+            sky2.changeColor("tomato");
+            sky2.moveHorizontal(-310);
+            sky2.moveVertical(-480);
+            sky2.changeSize(500);
+            sky2.makeVisible();
+            
+            sky3.changeColor("coral");
+            sky3.moveHorizontal(-310);
+            sky3.moveVertical(-550);
+            sky3.changeSize(500);
+            sky3.makeVisible();
+            
+            grass1.changeColor("green");
+            grass1.moveHorizontal(-310);
+            grass1.moveVertical(55);
+            grass1.changeSize(500);
+            grass1.makeVisible();
+            
+            trail.changeColor("trail");
+            trail.moveHorizontal(-310);
+            trail.moveVertical(125);
+            trail.changeSize(500);
+            trail.makeVisible();
+            
+            grass2.changeColor("green");
+            grass2.moveHorizontal(-310);
+            grass2.moveVertical(150);
+            grass2.changeSize(500);
+            grass2.makeVisible();
             
             Mount1.changeColor("brown");
-            Mount1.changeSize(60, 180);
-            Mount1.moveHorizontal(20);
-            Mount1.moveVertical(-80);
+            Mount1.changeSize(100, 150);
+            Mount1.moveHorizontal(10);
+            Mount1.moveVertical(-100);
             Mount1.makeVisible();
             
             Mount2.changeColor("brown");
-            Mount2.changeSize(60, 180);
+            Mount2.changeSize(100, 150);
             Mount2.moveHorizontal(40);
-            Mount2.moveVertical(-80);
+            Mount2.moveVertical(-100);
             Mount2.makeVisible();
             
             Mount3.changeColor("brown");
-            Mount3.changeSize(60, 180);
-            Mount3.moveHorizontal(60);
-            Mount3.moveVertical(-80);
+            Mount3.changeSize(100, 150);
+            Mount3.moveHorizontal(120);
+            Mount3.moveVertical(-100);
             Mount3.makeVisible();
             
             Mount4.changeColor("brown");
-            Mount4.changeSize(60, 180);
-            Mount4.moveHorizontal(0);
-            Mount4.moveVertical(-80);
+            Mount4.changeSize(100, 150);
+            Mount4.moveHorizontal(150);
+            Mount4.moveVertical(-100);
             Mount4.makeVisible();
             
             Mount5.changeColor("brown");
-            Mount5.changeSize(60, 180);
-            Mount5.moveHorizontal(-20);
-            Mount5.moveVertical(-80);
+            Mount5.changeSize(120, 200);
+            Mount5.moveHorizontal(80);
+            Mount5.moveVertical(-120);
             Mount5.makeVisible();
             
             Mount6.changeColor("brown");
-            Mount6.changeSize(60, 180);
+            Mount6.changeSize(120, 200);
             Mount6.moveHorizontal(-40);
-            Mount6.moveVertical(-80);
+            Mount6.moveVertical(-120);
             Mount6.makeVisible();
     
             sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
+            sun.moveHorizontal(-190);
+            sun.moveVertical(-65);
+            sun.changeSize(50);
             sun.makeVisible();
             drawn = true;
         }
@@ -106,8 +139,8 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
+        sky.changeColor("black");
+        grass1.changeColor("white");
         Mount1.changeColor("black");
         sun.changeColor("black");
     }
@@ -117,8 +150,8 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
+        sky.changeColor("red");
+        grass1.changeColor("black");
         Mount1.changeColor("green");
         sun.changeColor("yellow");
     }
