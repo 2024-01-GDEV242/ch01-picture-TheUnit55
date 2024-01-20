@@ -28,6 +28,9 @@ public class Picture
     private Triangle snowCap5;
     private Triangle snowCap6;
     private Circle sun;
+    private Person hiker;
+    private Person hiker2;
+    private Person hiker3;
     private boolean drawn;
 
     /**
@@ -54,6 +57,9 @@ public class Picture
         snowCap5 = new Triangle();
         snowCap6 = new Triangle();
         sun = new Circle();
+        hiker = new Person();
+        hiker2 = new Person();
+        hiker3 = new Person();
         drawn = false;
     }
 
@@ -64,7 +70,8 @@ public class Picture
      * I made a sunset scene of a mountain followed
      * by a trail park where people walk along the water
      * looking at the moutains just on the other side of the 
-     * trail with snowcaps symbolizing how big they are
+     * trail with snowcaps symbolizing how big they are.
+     * Two people are walking across each other
      */
     public void draw()
     {
@@ -182,6 +189,25 @@ public class Picture
             sun.moveVertical(-65);
             sun.changeSize(50);
             sun.makeVisible();
+            
+            hiker.changeColor("black");
+            hiker.moveHorizontal(100);
+            hiker.moveVertical(35);
+            hiker.changeSize(60,30);
+            hiker.makeVisible();
+            
+            hiker2.changeColor("black");
+            hiker2.moveHorizontal(-200);
+            hiker2.moveVertical(20);
+            hiker2.changeSize(60,30);
+            hiker2.makeVisible();
+            
+            hiker3.changeColor("black");
+            hiker3.moveHorizontal(300);
+            hiker3.moveVertical(35);
+            hiker3.changeSize(60,30);
+            hiker3.makeVisible();
+            
             drawn = true;
         }
     }
@@ -209,6 +235,9 @@ public class Picture
         grass1.changeColor("black");
         trail.changeColor("white");
         grass2.changeColor("black");
+        hiker.changeColor("white");
+        hiker2.changeColor("white");
+        hiker3.changeColor("white");
         sun.changeColor("white");
     }
 
@@ -236,5 +265,35 @@ public class Picture
         trail.changeColor("trail");
         grass2.changeColor("green");
         sun.changeColor("yellow");
+        hiker.changeColor("black");
+        hiker2.changeColor("black");
+        hiker3.changeColor("black");
+    }
+    
+    /**Animation
+     * I made an animation of People walking the trail
+     * while in the background the sun is setting
+     * Also works in black&white
+     */
+    public void sunSetWalk(){
+        for(int index = 1;index <= 25;index++){
+            sky3.slowMoveVertical(-2);
+            sun.slowMoveVertical(2);
+            Mount1.makeVisible();
+            Mount2.makeVisible();
+            Mount3.makeVisible();
+            Mount4.makeVisible();
+            Mount5.makeVisible();
+            Mount6.makeVisible();
+            snowCap1.makeVisible();
+            snowCap2.makeVisible();
+            snowCap3.makeVisible();
+            snowCap4.makeVisible();
+            snowCap5.makeVisible();
+            snowCap6.makeVisible();
+            hiker.slowMoveHorizontal(-25);
+            hiker2.slowMoveHorizontal(25);
+            hiker3.slowMoveHorizontal(-25);
+        }
     }
 }
