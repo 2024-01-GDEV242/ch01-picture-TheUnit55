@@ -120,6 +120,10 @@ public class Canvas
      * Set the foreground color of the Canvas.
      * @param  newColor   the new color for the foreground of the Canvas 
      */
+    
+    /** Challenge Adding more color options
+     * Added brown for mountains & light blue for a body of water
+     */
     public void setForegroundColor(String colorString)
     {
         if(colorString.equals("red")) {
@@ -142,6 +146,21 @@ public class Canvas
         }
         else if(colorString.equals("white")) {
             graphic.setColor(Color.white);
+        }
+        else if(colorString.equals("brown")) {
+            graphic.setColor(new Color(150,75,0));
+        }
+        else if(colorString.equals("light blue")) {
+            graphic.setColor(new Color(173,216,230));
+        }
+        else if(colorString.equals("tomato")) {
+            graphic.setColor(new Color(255,99,71));
+        }
+        else if(colorString.equals("coral")) {
+            graphic.setColor(new Color(255,127,80));
+        }
+        else if(colorString.equals("trail")) {
+            graphic.setColor(new Color(169,145,112));
         }
         else {
             graphic.setColor(Color.black);
